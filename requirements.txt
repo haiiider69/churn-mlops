@@ -1,0 +1,24 @@
+# --- core ML ---
+pandas
+numpy
+scikit-learn
+xgboost
+
+# --- experiment tracking & registry ---
+mlflow
+
+# --- serving ---
+fastapi
+uvicorn[standard]
+pydantic
+
+# --- drift monitoring ---
+evidently
+
+# --- config & utils ---
+pyyaml
+python-dotenv
+
+# --- testing & linting ---
+pytest
+ruff

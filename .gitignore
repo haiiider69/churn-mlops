@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Data (download yourself, see data/README.md)
+data/*.csv
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
