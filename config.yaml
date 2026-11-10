@@ -14,7 +14,7 @@ model:
 
 mlflow:
   experiment_name: "churn-prediction"
-  tracking_uri: "mlruns"   # local folder; change to a server URI later if needed
+  tracking_uri: "sqlite:///mlflow.db"  # local folder; change to a server URI later if needed
 
 registry:
   model_name: "churn-classifier"
