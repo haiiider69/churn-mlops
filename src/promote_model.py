@@ -74,11 +74,13 @@ def main(config_path: str):
 
     # Register the best run's model as a new version.
     model_uri = f"runs:/{best_run.info.run_id}/model"
+    model_type = best_run.data.params.get("model_type")
     new_version = mlflow.register_model(model_uri, model_name)
 
     # Tag the new version with its metric so future comparisons don't need
     # to re-query the run.
     client.set_model_version_tag(model_name, new_version.version, metric, str(best_metric_value))
+    client.set_model_version_tag(model_name, new_version.version, "model_type", model_type)
 
     # Point the "production" alias at this new version.
     client.set_registered_model_alias(model_name, "production", new_version.version)
